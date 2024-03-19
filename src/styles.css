@@ -8,9 +8,7 @@
     border-color: #e9ecef;
     cursor: default;
     height: 73px;
-    /* text-align: end; */
     font-size: 32px;
-    /* padding-bottom: 2px; */
 }
 
 .card .card-body .form-control:hover {
@@ -49,4 +47,13 @@
 
 .dark-ones:hover {
     background-color: #e3e3e3;
+}
+
+#close-btn-1 {
+    padding-right: 7px;
+}
+
+#close-btn-2 {
+    padding: 0px;
+    padding-right: 12px;
 }

@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     .replace('×', '*')
     .replace('÷', '/')
     .replace('%', '*0.01*')
+    .replace('sin', 'Math.sin')
+    .replace('cos', 'Math.cos')
+    .replace('ln', 'Math.log')
+    .replace('π', 'Math.PI')
+    .replace('tan', 'Math.tan')
+    .replace('log', 'Math.log10')
+    .replace('√', 'Math.sqrt')
+    .replace('e', 'Math.E')
+    .replace('EXP', 'Math.exp')
     ;
 
     const result = eval(convertedValue);
@@ -16,20 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     display.value = primaryValue;
   }
-
+  
   for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     const buttonText = button.innerText;
 
     button.addEventListener('click', () => {
-      if (buttonText == '=') {
-        evaluator(); 
-      } else if (buttonText == 'AC') {
-        primaryValue = '';
-        display.value = primaryValue; 
-      } else {
-        calculator(buttonText);
-      }
+      try {
+        display.style.color = 'Black'
+        if (buttonText == '=') {
+          evaluator(); 
+        } else if (buttonText == 'AC') {
+          primaryValue = '';
+          display.value = primaryValue; 
+        } else {
+          calculator(buttonText);
+        }
+      }  catch (error) {
+        console.error(error);
+        display.style.color = 'Red'
+        primaryValue = 'ERROR'
+        display.value = primaryValue;
+      }   
     })
   }
 
