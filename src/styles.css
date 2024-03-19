@@ -1,0 +1,52 @@
+
+.card {
+    border-radius: 8px;
+}
+
+.card .card-body .form-control {
+    background-color: #fff;
+    border-color: #e9ecef;
+    cursor: default;
+    height: 73px;
+    /* text-align: end; */
+    font-size: 32px;
+    /* padding-bottom: 2px; */
+}
+
+.card .card-body .form-control:hover {
+    background-color: #e9ecef;
+}
+
+.card-btns {
+    border-radius: 6px;
+    transition: none;
+    font-size: 20px;
+    font-family: arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card-btns:hover {
+    background-color: #d8dfe6;
+}
+
+.card-btns:active {
+    border: 1px solid #cde3fa;
+}
+
+#eval-btn {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+#eval-btn:hover {
+    background-color: #438dfa;
+    border-color: #438dfa;
+}
+
+.dark-ones {
+    background-color: #d9d9d9;
+}
+
+.dark-ones:hover {
+    background-color: #e3e3e3;
+}
