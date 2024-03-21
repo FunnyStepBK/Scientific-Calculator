@@ -1,59 +1,88 @@
 
+body {
+  background-color: rgb(35, 35, 35);
+}
+
+#card-container {
+  background-color:  rgb(35, 35, 35);
+}
+
 .card {
-    border-radius: 8px;
+  border-color: rgb(81, 81, 82);
+  border-radius: 12px;
 }
 
 .card .card-body .form-control {
-    background-color: #fff;
-    border-color: #e9ecef;
-    cursor: default;
-    height: 73px;
-    font-size: 32px;
+  border-color: rgb(81, 81, 82);
+  cursor: default;
+  height: 73px;
+  font-size: 32px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  text-align: end;
 }
 
 .card .card-body .form-control:hover {
-    background-color: #e9ecef;
+  background-color: rgb(61, 61, 61);
 }
 
 .card-btns {
-    border-radius: 6px;
-    transition: none;
-    font-size: 20px;
-    font-family: arial, sans-serif;
-    background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: none;
+  font-size: 20px;
+  font-family: arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 .card-btns:hover {
-    background-color: #d8dfe6;
+  background-color: #d8dfe6;
 }
 
 .card-btns:active {
-    border: 1px solid #cde3fa;
+  border: 1px solid #cde3fa;
 }
 
 #eval-btn {
-    background-color: #0d6efd;
-    color: #fff;
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 #eval-btn:hover {
-    background-color: #438dfa;
-    border-color: #438dfa;
+  background-color: #438dfa;
+  border-color: #438dfa;
 }
 
 .dark-ones {
-    background-color: #d9d9d9;
+  background-color: #d9d9d9;
 }
 
 .dark-ones:hover {
-    background-color: #e3e3e3;
+  background-color: #e3e3e3;
 }
 
 #close-btn-1 {
-    padding-right: 7px;
+  padding-right: 7px;
 }
 
 #close-btn-2 {
-    padding: 0px;
-    padding-right: 12px;
+  padding: 0px;
+  padding-right: 12px;
+}
+
+#back-btn {
+  display: flex;
+  justify-content: center;
+  /* padding: 9px 12px; */
+}
+
+#backspace-symbol {
+  font-weight: bold;
+}
+
+#toggle-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  color: rgb(140, 140, 143);
 }
