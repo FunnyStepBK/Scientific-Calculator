@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const backBtnContent = `<span class="material-symbols-outlined" id="backspace-symbol">
   keyboard_backspace
   </span>`;
-
+  const toggleBtn = document.getElementById('toggle-btn');
+  const numberBtns = document.getElementById('number-btns');
+  const scientificFunc = document.getElementById('scientific-functions');
+  const colContainer = document.getElementById('card-container');
+  const numbersCol = document.getElementById('first-column')
+  const functionsCol = document.getElementById('second-column')
+ 
   function evaluator () {
     const convertedValue = primaryValue
     .replace('×', '*')
@@ -47,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
           primaryValue = ''; 
         } else if (button.innerHTML == 'AC') {
           primaryValue = '';
-          display.value = primaryValue; 
+          display.value = ''; 
           backSpaceBtn();
         } else if (button.innerHTML === backBtnContent) {
           primaryValue = primaryValue.slice(0, -1);
@@ -67,16 +73,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function calculator (buttonText) {
-    primaryValue += buttonText;
-    display.value = primaryValue; 
+    if (buttonText === 'AC') {
+      backSpaceBtn();
+    } else {
+      primaryValue += buttonText;
+      display.value = primaryValue; 
+    }
   }
 
   function backSpaceBtn () {
-    backBtn.style.paddingTop = '9px';
-    backBtn.style.paddingBottom = '9px';
+    backBtn.style.paddingTop = '8.36px';
+    if (window.innerWidth >= 992) {
+      backBtn.style.paddingBottom = '8px';
+    } else if (window.innerWidth < 576) {
+      backBtn.style.paddingBottom = '7px';
+    } else {
+      backBtn.style.paddingBottom = '6px';
+    }
     backBtn.innerHTML = backBtnContent;
   }
 
+  toggleBtn.addEventListener('click', () => {
+    if (numberBtns.classList.contains('js-styles-btn')) {
+      numberBtns.classList.remove('js-styles-btn');
+      numberBtns.classList.add('js-styles-btn-active');
+      scientificFunc.classList.remove('js-styles-btn-active');
+      scientificFunc.classList.add('js-styles-btn');
+      numbersCol.scrollIntoView({
+        behavior: 'smooth'
+      });
+    } else {
+      numberBtns.classList.add('js-styles-btn');
+      numberBtns.classList.remove('js-styles-btn-active');
+      scientificFunc.classList.add('js-styles-btn-active');
+      scientificFunc.classList.remove('js-styles-btn');
+      functionsCol.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  })
 })
 
   

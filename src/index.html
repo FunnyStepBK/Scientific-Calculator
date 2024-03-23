@@ -27,140 +27,169 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-md">
       <h1 class="text-center mt-3 text-light">Scientific Calculator</h1>
       <div class="row">
-        <div class="offset-md-1 col-sm-12 col-md-10 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
           <div class="card mt-3">
-            <div class="card-body" id="card-container">
+            <div id="display-container" class="card-body">
               <input readonly id="js-no-display" class="form-control form-control-lg pb-0" type="text" aria-label=".form-control-lg example">
-              <div class="row gx-2 mt-2">
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">(</button>
+            </div>
+            <div class="card-body pt-0" id="card-container"> 
+
+
+              <!-- FIRST-COLUMN -->
+
+              <div id="first-column" class="card-body px-0 common-column-props pb-0">
+                <div class="row gx-2 mt-2">
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">(</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">)</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">%</button>
+                  </div>
+                  <div class="col-3">
+                    <button id="back-btn" type="button" class="btn w-100 mt-2 card-btns dark-ones">
+                      AC
+                    </button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">)</button>
+                <div class="row gx-2">
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">7</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">8</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">9</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">÷</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">%</button>
+                <div class="row gx-2">
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">4</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">5</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">6</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">×</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button id="back-btn" type="button" class="btn w-100 mt-2 card-btns dark-ones">
-                    AC
-                  </button>
+                <div class="row gx-2">
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">1</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">2</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">3</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">-</button>
+                  </div>
                 </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">7</button>
+                <div class="row gx-2">
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns">0</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold">.</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold" id="eval-btn">=</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">+</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">8</button>
+              </div> 
+
+
+              <!-- SECOND-COLUMN -->
+
+              <div id="second-column" class="card-body px-0 common-column-props">
+                <div class="row mt-2">
+                  <div class="col-6 col-sm-8" id="close-btn-1">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">Rad</button>
+                  </div>
+                  <div class="col-3 col-sm-4 close-btns pr-5" id="close-btn-2">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">x!</button>
+                  </div>
+                  <div class="col-3 last-col"  id="close-btn-3">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">lnv</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">9</button>
+                <div class="row gx-2">
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">sin</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">ln</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">π</button>
+                  </div>
+                  <div class="col-3 last-col">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">cos</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">÷</button>
+                <div class="row gx-2">
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">log</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">e</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">tan</button>
+                  </div>
+                  <div class="col-3 last-col">
+                    <button type="button" class="btn w-100 mt-2 fw-bold card-btns dark-ones">√</button>
+                  </div>
                 </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">4</button>
+                <div class="row gx-2">
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">Ans</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">EXP</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">x^y</button>
+                  </div>
+                  <div class="col-3 last-col">
+                    <button type="button" class="btn w-100 mt-2 card-btns fw-bold" id="eval-btn">=</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">5</button>
+                <div class="row gx-2 d-none" id="last-btn-row">
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">lnv</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 card-btns dark-ones">cos</button>
+                  </div>
+                  <div class="col-3 col-sm-4">
+                    <button type="button" class="btn w-100 mt-2 fw-bold card-btns dark-ones">√</button>
+                  </div>
                 </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">6</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">×</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">1</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">2</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">3</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">-</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns">0</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold">.</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold" id="eval-btn">=</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn w-100 mt-2 card-btns fw-bold dark-ones">+</button>
-                </div>
-                <div id="toggle-btn" class="col-6">
-                  <div id="number-btns">123</div>
-                  <div id="btn-divider">|</div>
-                  <div id="Scientific-functions">sin</div>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-8" id="close-btn-1">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">Rad</button>
-                </div>
-                <div class="col-4 close-btns pr-5" id="close-btn-2">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">x!</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">lnv</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">sin</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">ln</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">π</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">cos</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">log</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">e</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">tan</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 fw-bold card-btns dark-ones">√</button>
-                </div>
-              </div>
-              <div class="row gx-2">
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">Ans</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">EXP</button>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn w-100 mt-2 card-btns dark-ones">x^y</button>
+              </div>   
+            </div>
+            <div class="card-body" id="tg-btn-container">
+              <div class="row mt-1">
+                <div id="toggle-btn" class="col-4">
+                  <div id="number-btns" class="common-props js-styles-btn-active">123</div>
+                  <div id="scientific-functions" class="common-props js-styles-btn">sin</div>
                 </div>
               </div>
             </div>
