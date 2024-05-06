@@ -28,12 +28,27 @@
 
   <body>
     <div class="container-md">
-      <h1 class="text-center mt-3 text-light">Scientific Calculator</h1>
+      <h1 class="text-center mt-3 text-dark">Scientific Calculator</h1>
       <div class="row">
         <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
           <div class="card mt-3">
             <div id="display-container" class="card-body">
-              <input readonly id="js-no-display" class="form-control form-control-lg pb-0" type="text" aria-label=".form-control-lg example">
+              <div class="form-control form-control-lg pb-0" type="text" aria-label=".form-control-lg example">
+                <div id="top-line">
+                  <div>
+                    <span class="material-symbols-outlined" id="js-history-btn">
+                      history
+                    </span>
+                  </div>
+                  <div id="previous-result"></div>
+                </div> 
+                <div id="js-no-display"></div>
+              </div>
+              <div id="history-display" class="rounded history-display-unactive">
+                <span id="active-history-btn" class="material-symbols-outlined pt-2 pl-3">
+                  history
+                </span>
+              </div>
             </div>
             <div class="card-body pt-0" id="card-container"> 
 

@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
 body {
-  background-color: rgb(35, 35, 35);
+  background-color: #fff;
 }
 
 #card-container, #tg-btn-container, #display-container {
-  background-color:  rgb(35, 35, 35);
+  background-color:  #fff;
 }
 
 #card-container {
@@ -34,35 +35,82 @@ body {
 .card {
   border: none;
   border-radius: 12px;
-  box-shadow: 0px 0px 20px #438dfa;
+  box-shadow: 0px 0px 5px;
   word-wrap: normal;
 }
 
+.card #display-container {
+  border: 1px solid rgb(76, 76, 77);
+}
+
 .card .card-body .form-control {
-  border-color: rgb(81, 81, 82);
   cursor: default;
   height: 73px;
   font-size: 32px;
   letter-spacing: 2px;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   text-align: end;
+  padding-inline: 8px;
+  height: 88px;
+  user-select: none;
+  position: relative;
 }
 
 .card .card-body .form-control:hover {
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(221, 218, 218);
+}
+
+#top-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+#js-history-btn {
+  cursor: pointer;
+}
+
+#history-display {
+  background-color: lightblue;
+  width: 443px;
+  min-height: 100px;
+  max-height: 60vh;
+  position: absolute;
+  top: 6%;
+  left: 4px;
+  overflow: scroll;
+  user-select: none;
+}
+
+.history-display-unactive {
+  display: none;
+}
+
+.history-display-active {
+  display: flex;
+}
+
+#active-history-btn {
+  color: #438dfa;
+  padding-left: 7px;
+}
+
+#active-history-btn:hover {
+  color: #2171eb;
 }
 
 .card-btns {
-  border-radius: 6px;
+  border-radius: 4px;
   transition: none;
   font-size: 18px;
-  font-family: arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #f0f0f0;
 }
 
 .card-btns:hover {
-  background-color: #d8dfe6;
+  background-color: #494c4e;
+  color: #fff;
 }
 
 .card-btns:active {
@@ -70,21 +118,24 @@ body {
 }
 
 #eval-btn {
-  background-color: #0d6efd;
+  background-color: #4cd137;
   color: #fff;
 }
 
 #eval-btn:hover {
-  background-color: #438dfa;
-  border-color: #438dfa;
+  background-color: #74d465;
+  border-color: #5ed84b;
 }
 
 .dark-ones {
-  background-color: #d9d9d9;
+  background-color: #00a8ff;
+  border: 1px solid #00a8ff;
+  color: #fff;
 }
 
 .dark-ones:hover {
-  background-color: #e3e3e3;
+  background-color: #fff;
+  color: #00a8ff;
 }
 
 #close-btn-1 {
@@ -101,8 +152,36 @@ body {
 }
 
 #back-btn {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  color: #e74c3c;
+  background-color: #fff;
+  border: 1px solid #e74c3c;
+  transition: color 0.8s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#back-btn:hover {
+  color: #fff;
+}
+
+#back-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #e74c3c;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+#back-btn:hover::before {
+  height: 180%;
 }
 
 #backspace-symbol {
@@ -112,7 +191,7 @@ body {
 #toggle-btn {
   display: flex;
   flex-direction: row;
-  color: #fff;
+  color: #000;
   user-select: none;
 }
 
@@ -129,7 +208,6 @@ body {
 }
 
 .js-styles-btn {
-  color: #fff;
   background-color: transparent;
   border-color: grey;
 }
@@ -169,7 +247,7 @@ body {
 
   .card-btns {
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   #tg-btn-container {
